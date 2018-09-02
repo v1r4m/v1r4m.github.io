@@ -1,21 +1,32 @@
-html{ 
-	background: url(lib/img/door/door.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+#nav{
+	float:left;
+	margin-left:10px;
+	width:300px;
+	font-family: 'Slabo 27px', serif;
 }
 
-#logo {
-	height:auto;
-	position:absolute;
-	width:60%;
-	z-index:1000;
-	left:0;
-	right:0;
-	margin-left:auto;
-	margin-right:auto;
+#header{
+	font-family: 'Slabo 27px', serif;
+	font-size:10px;
+	text-align:center;
 }
-#logo img {
-	width:100%;
+
+#content{
+	float:right;
+	position:absolute;
+	left:310px;
+	top:20px;
+}
+
+.picture{
+	max-width:75%;
+	height:auto;
+}
+
+b{
+	font-weight:bold;
+}
+
+i{
+	font-style:italic;
 }
