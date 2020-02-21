@@ -3,13 +3,11 @@
 	<title>Viram, Moments Never Fade</title>
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<link rel="stylesheet" type="text/css" href="css/mystyle.css">
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
 		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="http://code.jQuery.com/jQuery-latest.js" type="text/javascript"></script>
-		<script type="text/javascript" src="js/js.js"></script>
-		<script type="text/javascript" src="js/html5slider.js"></script>
+
 	</head>
 	<body>
 		<div id="header">
@@ -17,10 +15,10 @@
 		</div>
 		<div id="player">
 			<div class="playerBox">
-				<a class="button gradient" id="play" href="" title=""></a>
-				<a class="button gradient" id="pause" href="" title=""></a>
-				<a class="button gradient" id="stop" href="" title=""></a>
-					<input type="range" id="seek" value="0" max=""/>
+				<button class="button gradient" id="play" href="" title="">&#9654;</button>
+				<button class="button gradient" id="pause" href="" title="">&#10074;&#10074;</button>
+				<button class="button gradient" id="stop" href="" title="">&FilledSmallSquare;</button>
+				<input type="range" id="seek" value="100" max=""/>
 			</div>
 		</div><!-- /player -->
 <!--	<div id="nav">
@@ -34,5 +32,7 @@
 <!--		<div id=content">
 			<img class='picture' src="http://cfile5.uf.tistory.com/original/99C3D5485B7AE3500BC587"/>
 		</div>-->
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/html5slider.js"></script>
 	</body>
 </html>
