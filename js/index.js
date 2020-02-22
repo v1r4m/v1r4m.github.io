@@ -43,6 +43,11 @@ $('#stop').click(function(){
 	song.currentTime=0;
 });
 
+$("#seek").bind("change",function() {
+	song.volume = $(this).val()/100;
+	console.log($(this).val());
+});
+
 
 // Basic Javascript
 /*$(function(){
