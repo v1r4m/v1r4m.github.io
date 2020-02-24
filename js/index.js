@@ -23,27 +23,6 @@ jQuery(document).ready(function()
 });
 
 
-var nick = "leagueoflehends";
-var url = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/"+nick+"?api_key=RGAPI-f2f9967a-af66-4f6f-ab42-3090cf29ad2a";
-
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function()
-{
-	if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
-	{
-		var arr = JSON.parse(xmlhttp.responseText);
-		id = arr[nick].id;
-		console.log(id);
-	}
-	else
-	{
-		console.log("cannot find the summoner");
-	}
-}
-xmlhttp.open("GET", url, false);
-xmlhttp.send();
-
-
 $('#play').click(function()
 {
 	song.play();
