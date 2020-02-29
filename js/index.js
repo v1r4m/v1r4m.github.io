@@ -7,21 +7,29 @@ jQuery(document).ready(function()
 	song = new Audio('music/main.mp3');
 	song.volume = 0.1;
 	duration = song.duration;	
-/*	var api_key = "RGAPI-f2f9967a-af66-4f6f-ab42-3090cf29ad2a";
-	var lolapi = new XMLHttpRequest();
-	lolapi.open("GET", "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/"
-				+'leagueoflehends' +'?api_key=' + api_key);
-	lolapi.send();
-	lolapi.onreadystatechange = function()
-	{
-		if(this.readyState == 200)
-		{
-			var response = JSON.parse(this.responseText);
-			document.getElementById("lol").innerHTML = response.summonerLevel;
-		}
-	};*/
 });
 
+function Pinger_ping(ip, callback) {
+
+	if(!this.inUse) {
+  
+	  this.inUse = true;
+	  this.callback = callback
+	  this.ip = ip;
+  
+	  var _that = this;
+  
+	  this.img = new Image();
+  
+	  this.img.onload = function() {_that.good();};
+	  this.img.onerror = function() {_that.good();};
+  
+	  this.start = new Date().getTime();
+	  this.img.src = "http://caujg.herokuapp.com/" + ip;
+	  this.timer = setTimeout(function() { _that.bad();}, 1500);
+  
+	}
+  }
 
 $('#play').click(function()
 {
